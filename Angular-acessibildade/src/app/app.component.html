@@ -1,6 +1,12 @@
 <main>
 
   <h1>Form</h1>
+
+  <input type="radio" id="yes" name="yesNoAnswer" value="true">
+  <label for="yes">Yes</label>
+  <input type="radio" id="no" name="yesNoAnswer" value="false">
+  <label for="no">No</label>
+
   <form [formGroup]="form">
   <app-yes-no-button-group
    formControlName="yesNoAnswer"
