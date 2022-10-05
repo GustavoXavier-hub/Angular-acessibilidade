@@ -1,17 +1,10 @@
 <main>
-
-  <h1 tabindex="0">Form</h1>
-   <input>
-  <input type="radio" id="yes" name="yesNoAnswer" value="true">
-  <label for="yes">Yes</label>
-  <input type="radio" id="no" name="yesNoAnswer" value="false">
-  <label for="no">No</label>
-
-  <form [formGroup]="form">
-  <app-yes-no-button-group
-   formControlName="yesNoAnswer"
-    label="Are you good enough in Angular?">
-  </app-yes-no-button-group>
-  <button>Submit</button>
+  <h1>Form</h1>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <app-yes-no-button-group
+      formControlName="yesNoAnswer"
+      label="Are you good enough in Angular?">
+    </app-yes-no-button-group>
+    <button>Submit</button>
   </form>
 </main>
