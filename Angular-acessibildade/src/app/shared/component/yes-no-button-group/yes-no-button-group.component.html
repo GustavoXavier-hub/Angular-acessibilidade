@@ -1,3 +1,21 @@
+<div 
+class="button-group"
+role="radiogroup"
+[attr.aria-label]="label"
+<label>{{ label }}</label>
+<div class="radio">
+<input
+[attr.id]="id  + '-yes'"
+type="radio"
+[attr.name]="id"
+[attr.checked]="value == options.YES"
+(change)="activate"(option.YES)>
+<label [attr.for]="id + '-yes'" class="button button-yes">
+  Yes
+</label>
+  </div>
+</div>
+<!---
 <div
   appKm
   role="radiogroup"
@@ -31,3 +49,4 @@
       No
   </button>
 </div>
+-->
